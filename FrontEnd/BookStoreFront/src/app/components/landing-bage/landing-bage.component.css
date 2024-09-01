@@ -1,0 +1,261 @@
+.landing-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10rem;
+  height: 70vh;
+  overflow: hidden; /* Prevents overflow of images during animation */
+  /* border: solid; */
+}
+section {
+  width: 88%;
+
+  margin: 3rem auto;
+}
+.blog-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.blog-container img {
+  width: 100%;
+  height: auto;
+  opacity: 0; /* Start with hidden images */
+  animation: fadeIn 1s forwards;
+}
+
+.blog-headeing {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.blog-headeing h1 {
+  font-size: 55px;
+  font-family: "Whisper", cursive;
+  font-weight: 500;
+  animation: slideInFromTop 1s forwards;
+}
+
+.blog-headeing p {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Bitter", serif;
+  font-weight: 600;
+  font-size: 24px;
+  animation: slideInFromBottom 1s forwards;
+}
+
+/* Container Styles */
+.blog-container div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.blog-container div:nth-child(1) {
+  width: 30%;
+  animation: slideInFromLeft 1s forwards;
+}
+
+.blog-container div:nth-child(2) {
+  margin-top: 150px;
+  width: 50%;
+
+  animation: slideInFromRight 1s forwards;
+}
+
+.blog-container div:nth-child(3) {
+  width: 20%;
+  animation: slideInFromLeft 1s forwards;
+}
+
+.blog-imgs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.blog-imgs .blog-img-container {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blog-imgs img {
+  width: 230px;
+  height: 250px;
+  opacity: 0; /* Start with hidden images */
+  animation: slideInFromTop 1s forwards;
+}
+
+.blog-img-container img:nth-child(2) {
+  margin-top: 100px;
+  animation: slideInFromTop 1s forwards;
+
+}
+
+.blog-img-container img:nth-child(3) {
+  width: 200px;
+  height: 235px;
+  animation: slideInFromTop ,fadeIn 1s forwards;
+
+}
+.book-slider {
+  width: 100%;
+  padding: 50px;
+  margin-top: 5rem;
+
+}
+swiper-slide {
+  height: 550px !important;
+
+}
+
+swiper-slide  img {
+  object-fit: cover;
+  background-position: center;
+
+}
+.book-slider {
+  width: 100%;
+  height: auto; /* Adjust based on your design */
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  overflow: hidden; /* Ensures no overflow */
+
+}
+
+swiper-container {
+  width: 80%;
+  height: 100%;
+}
+
+swiper-slide {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 100%; /* Takes full height of container */
+  flex-direction: column;
+}
+
+swiper-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; /* Ensures image covers the container while maintaining aspect ratio */
+  margin: auto; /* Centers image inside the slide */
+  position: relative;
+}
+.icn-font i {
+  font-size: 75px;
+}
+.visit-btn {
+  position: absolute;
+  /* bottom: 20px; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-25%,-25%);
+  width: 150px;
+  height: 50px;
+  background-color: rgb(255, 192, 34);
+  border: white;
+  outline: none;
+  transition: 0.3s all ease;
+}
+.visit-btn:hover {
+  background-color: black;
+}
+.swiper-button-next svg, .swiper-button-prev svg {
+ color:  rgb(255, 192, 34) !important ;
+ background-color: #f1f1f1 !important;
+}
+.icons-slider {
+  margin-bottom: 5rem;
+}
+.icon-img  {
+  padding: 0 !important;
+}
+.icon-img a {
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.87) !important;
+
+
+}
+@media (max-width: 768px) {
+  .blog-headeing p {
+    font-size: 20px;
+  }
+  .blog-headeing h1 {
+    font-size: 33px;
+  }
+  .footer {
+    padding: 20px;
+  }
+  .image2,.image3{
+    display: none !important;
+  }
+}
+/* Keyframes for animations */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-300%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

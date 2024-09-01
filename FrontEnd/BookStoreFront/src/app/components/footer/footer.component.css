@@ -1,0 +1,53 @@
+/* General Styles */
+h5 {
+  font-family: "Whisper", cursive;
+  font-size: 36px; /* Responsive font size */
+  font-weight: bold;
+  color: white;
+}
+
+.footer {
+  display: flex !important;
+  flex-direction: column !important; /* Stack elements on smaller screens */
+  justify-content: center !important;
+  align-items: center !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+  text-align: center;
+}
+
+/* Link and Text Styles */
+a, p, label {
+  color: white !important;
+}
+
+.ul-hover li a {
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.ul-hover li a:hover {
+  color: #ffbd07 !important;
+}
+
+/* Hover Effect for SVGs */
+.ul-hover li a svg {
+  fill: #ffffff;
+  transition: fill 0.3s ease;
+}
+
+.ul-hover li a svg:hover {
+  fill: #ffbd07 !important;
+}
+
+/* Responsive Media Queries */
+@media (min-width: 768px) {
+  .footer {
+    flex-direction: row !important; /* Align elements in a row on larger screens */
+    text-align: left;
+  }
+
+  h5 {
+    font-size: 50px; /* Larger font size for larger screens */
+  }
+}

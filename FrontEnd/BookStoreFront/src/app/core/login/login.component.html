@@ -1,0 +1,35 @@
+
+
+
+<div class="container register-container">
+  <mat-card >
+    <mat-card-header style="text-align: center;">
+      <h1 > Login</h1>
+    </mat-card-header>
+    <mat-card-content>
+  
+    <form class="register-form" [formGroup]="loginForm" (ngSubmit)="processLogin()">
+        
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email">
+        
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
+        </div>
+        <div class="submit-login">
+          <div class="btn-submit">
+            <button type="submit" class="btn btn-warning">Submit</button>
+        </div>
+        <div class="btn-submit">
+          <a routerLink="/register" class="btn btn-warning">Back to Register</a>
+        </div>
+        </div>
+        
+      </form>
+   </mat-card-content>
+    </mat-card>
+
+</div>

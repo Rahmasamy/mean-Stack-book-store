@@ -1,0 +1,24 @@
+<div class="user-big-container">
+  <div class="category-container">
+    <h3>Shop By Category</h3>
+
+    <div class="container userCategoreyParent">
+      <div class="" *ngFor="let categoryPair of categories; let i = index">
+        <div class="cardParent">
+          <div class="image">
+            <img [src]="imageUrl + categoryPair.imagePaths" alt="" />
+          </div>
+          <div class="card-body1">
+            <h6 class="">{{ categories[i].name }}</h6>
+            <h6 class="card-text-desc">{{ categoryPair.desc2 }}</h6>
+            <a
+              class="btn-show"
+              [routerLink]="'/categoryDetails/' + categories[i]._id"
+              >show</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

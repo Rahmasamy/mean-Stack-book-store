@@ -1,0 +1,81 @@
+.container {
+  margin-top: 10rem;
+  /* background-color: black; */
+}
+.parent-nav-left {
+  height: 70vh !important;
+  /* border: solid; */
+  justify-content: start !important;
+  align-content: flex-start !important;
+  overflow-y: auto;
+  border-radius: 20px;
+}
+.btn {
+  width: 70%;
+  padding: 0.3rem;
+  margin-left: 1rem;
+}
+.btn:nth-child(1) {
+  margin-top: 1.6rem;
+}
+
+.user-profile {
+  margin-top: 10rem;
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.profile-header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffbe45; /* Border around the image */
+}
+
+.admin-name {
+  margin-top: 15px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.admin-role {
+  font-size: 16px;
+  color: #6c757d;
+}
+
+.profile-details {
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for card */
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.list-group-item {
+  border: none;
+  padding: 10px 15px;
+}
+
+.profile-actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile-actions .btn {
+  margin: 5px;
+}
+
+.admin-profile {
+  margin-top: 10rem;
+}

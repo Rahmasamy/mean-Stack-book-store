@@ -1,0 +1,52 @@
+<div class="user-big-container">
+  <div class="user-container">
+    <h1>users</h1>
+    <div class="icon-plus">
+      <i
+        class="fa-solid fa-plus btn btn-warning"
+        (click)="openAddCategoryForm()"
+      ></i>
+    </div>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Iamge</th>
+          <th scope="col">Email</th>
+          <th scope="col">Role</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <th scope="row">{{ user.name }}</th>
+          <th scope="row">
+            <img
+              [src]="
+                user.imagePaths
+                  ? imageUrl + user.imagePaths
+                  : imageUrl + defaultImage
+              "
+              width="40px"
+              alt=""
+            />
+            <!-- {{ user.imagePaths }} -->
+          </th>
+          <td class="emailRes">{{ user.email }}</td>
+          <td>{{ user.role }}</td>
+          <td>
+            <div class="icons">
+              <a (click)="deleteUserById(user._id)"
+                ><i class="fa-solid fa-trash btn btn-warning"></i
+              ></a>
+              <a (click)="openEditForm(user)"
+                ><i class="fa-solid fa-pen-to-square btn btn-warning"></i
+              ></a>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+<div class="bookDetails">
+  <div class="parentBookTop">
+    <div class="bookLeft">
+      <div class="parentImage">
+        <img [src]="imageUrl + image" alt="Orange Image" />
+      </div>
+      <!-- user-all.component.html -->
+      <div class="parentBookRight">
+        <select
+          class="select"
+
+          (change)="onStatusChange($event, bookDetials?._id)"
+        >
+          <option value="no-Reading">no-Reading</option>
+          <option value="want_to_read">want-to-read</option>
+          <option value="current_read">current_read</option>
+          <option value="read">read</option>
+        </select>
+
+        <div class="starts">
+          <app-star-rating
+            [(rating)]="bookDetials.rating"
+            (ratingChange)="updateBookWithStars($event, bookDetials?._id)"
+          ></app-star-rating>
+        </div>
+      </div>
+
+      <div class="starts">
+        <span>&#9733;</span>
+        <span>&#9733;</span>
+        <span>&#9733;</span>
+        <span>&#9733;</span>
+        <span>&#9733;</span>
+      </div>
+    </div>
+    <div class="parentBookRight">
+      <h2>{{ bookDetials.title }}</h2>
+      <h2>by {{ bookDetials.Author }}</h2>
+      <h2>Category {{ bookDetials.Category }}</h2>
+      <div class="starts">
+        <span>&#9733;</span>
+        <span>&#9733;</span>
+        <span>&#9733;</span>
+        <span>&#9733;</span>
+        <span>&#9733;</span>
+        <span>{{ bookDetials.rating }} </span>
+      </div>
+      <p>
+        {{ bookDetials.desc }}
+      </p>
+    </div>
+  </div>
+
+  <div class="parentDown">
+    <h4>Reviews</h4>
+    <div class="reviews">
+      @for (item of bookDetials.reviews; track $index) {
+      <p>
+        <strong>{{ $index + 1 }} :-</strong> {{ item }}
+      </p>
+      }
+    </div>
+  </div>
+</div>

@@ -1,0 +1,71 @@
+<div class="container user-profile" *ngIf="!isAdmin">
+  <div class="row gap-5">
+    <div class="col-2">
+      <nav class="navbar bg-body-tertiary parent-nav-left">
+        <form class="container-fluid justify-content-start gap-4">
+          <a class="btn btn-outline-warning me-2" type="button" routerLink="all"
+            >all</a
+          >
+
+          <a class="btn btn-outline-warning" type="button" routerLink="Read"
+            >Read</a
+          >
+
+          <a
+            class="btn btn-outline-warning"
+            type="button"
+            routerLink="currentRead"
+            >current Read</a
+          >
+          <a
+            class="btn btn-outline-warning"
+            type="button"
+            routerLink="WantToRead"
+            >Want To Read</a
+          >
+        </form>
+      </nav>
+    </div>
+    <table class="col-9">
+      <div class="">
+        <router-outlet> </router-outlet>
+      </div>
+    </table>
+  </div>
+</div>
+<p>
+  hello world
+</p>
+<div class="container"  *ngIf="isAdmin">
+  <div class="admin-profile container py-4">
+    <div class="profile-header text-center mb-4">
+      <img class="profile-pic" [src]="imageUrl + profileImage.imagePaths[0]" alt="Admin Profile Picture" />
+      <h2 class="admin-name mt-3">{{profileImage.name}}</h2>
+      <p class="admin-role">Administrator</p>
+    </div>
+
+    <div class="profile-details card p-4">
+      <h3 class="section-title">Profile Details</h3>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <strong>Email:</strong> {{profileImage.email}}
+        </li>
+        <li class="list-group-item">
+          <strong>Role:</strong> {{profileImage.role}}
+        </li>
+        <li class="list-group-item">
+          <strong>Joined:</strong> {{profileImage.createdAt}}
+        </li>
+        <li class="list-group-item">
+          <strong>Last update:</strong> {{profileImage.updatedAt}}
+        </li>
+      </ul>
+    </div>
+
+    <div class="profile-actions mt-4">
+      <button class="btn btn-primary">Edit Profile</button>
+      <button class="btn btn-danger">Log Out</button>
+    </div>
+  </div>
+
+</div>

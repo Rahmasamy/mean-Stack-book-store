@@ -1,0 +1,59 @@
+<div class="popup-container">
+  <button
+    class="btn btn-warning"
+    style="color: aliceblue !important ; margin-left: auto; margin-bottom: 1rem"
+    (click)="closeDialog()"
+  >
+    X
+  </button>
+  <form
+    action=""
+    class="userForm"
+    (ngSubmit)="onFormSubmit()"
+    [formGroup]="userForm"
+  >
+    <mat-form-field>
+      <mat-label> User Name</mat-label>
+      <input matInput formControlName="name" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label> Email</mat-label>
+      <input matInput formControlName="email" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label> Password</mat-label>
+      <input matInput formControlName="password" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Role</mat-label>
+      <mat-select formControlName="role">
+        <mat-option value="admin">Admin</mat-option>
+        <mat-option value="user">User</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Is Admin</mat-label>
+      <input matInput formControlName="isAdmin" />
+    </mat-form-field>
+    @if (!data ) {
+    <div>
+      <label> img</label>
+      <input
+        type="file"
+        style="color: white"
+        (change)="onFileSelected($event)"
+      />
+    </div>
+    }
+    <div mat-dialog-actions class="action">
+      <button
+        mat-raised-button
+        color="warning"
+        class="btn btn-warning"
+        type="submit"
+      >
+        {{ data ? "Update" : "Save" }}
+      </button>
+    </div>
+  </form>
+</div>

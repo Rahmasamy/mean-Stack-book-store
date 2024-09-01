@@ -1,0 +1,22 @@
+<div class="container " *ngIf="categoryDeials">
+  <h1>Category Name: {{ categoryDeials.name }}</h1>
+  <div class="categoryDeials">
+    <div class="item-category" *ngFor="let book of Books">
+      <div class="img-parent">
+        <img [src]="imageUrl + book.imagePaths" alt="" />
+      </div>
+      <div class="category-content">
+        <p>
+          Book title :
+          <a [routerLink]="'/bookDetails/' + book._id"> {{ book.title }}</a>
+        </p>
+        <p>
+          Author Name :
+          <a [routerLink]="'/authorDetails/' + book.Author_id">
+            {{ book.Author }}</a
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

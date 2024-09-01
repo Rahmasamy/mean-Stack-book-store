@@ -1,0 +1,138 @@
+/* Container for the entire user section */
+.user-big-container {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: slideInFromTop 1s forwards;
+}
+
+/* Container for the user table */
+.user-container {
+  width: 70%;
+}
+
+/* Heading style */
+h1 {
+  font-size: 55px;
+  font-family: "Whisper", cursive;
+  font-weight: 500;
+}
+
+/* Button icon container */
+.icon-plus {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Table style */
+.table {
+  margin-top: 20px;
+}
+
+/* Style for anchor tags inside the table */
+a {
+  margin-left: 17px;
+}
+
+/* Animation for sliding in from the top */
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-300%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Media Queries for responsiveness */
+
+/* For tablets and below (up to 1024px) */
+@media (max-width: 1024px) {
+  .user-container {
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 45px;
+  }
+
+  .icon-plus {
+    justify-content: center;
+  }
+
+  a {
+    margin-left: 10px;
+  }
+}
+
+/* For mobile devices (up to 768px) */
+@media (max-width: 768px) {
+  .user-container {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  .icon-plus {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .table {
+    margin-top: 15px;
+  }
+
+  /* Adjust table columns for smaller screens */
+  .table th,
+  .table td {
+    padding: 3px;
+    font-size: 12px;
+    width: fit-content !important;
+  }
+
+  .table img {
+    width: 30px; /* Adjust image size */
+  }
+  .emailRes {
+    font-size: 10px !important;
+  }
+}
+.icons *{
+  margin: 5px;
+}
+/* For very small screens (up to 480px) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  .icon-plus {
+    margin-bottom: 5px;
+  }
+
+  .table {
+    font-size: 12px;
+  }
+
+  .table img {
+    width: 25px; /* Adjust image size */
+  }
+
+  a {
+    margin-left: 8px;
+  }
+  .emailRes {
+    font-size: 10px !important;
+  }
+}

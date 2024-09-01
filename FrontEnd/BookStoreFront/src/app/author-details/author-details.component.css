@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .authorDetails {
+    width: 90%;
+    margin: 3rem auto;
+    margin-top: 8rem;
+  }
+
+  .parentBookTop {
+    width: 88%;
+    margin: 2rem auto;
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .bookLeft {
+    width: 50%;
+  }
+
+  .bookLeft .parentImage {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 1rem;
+  }
+
+  .bookLeft .parentImage img {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .starts {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .starts span {
+    display: inline-block;
+    color: gold;
+    width: 1.1em;
+    font-size: larger;
+  }
+
+  .parentBookRight {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .bookDate {
+    font-weight: 400;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1.2rem;
+  }
+
+  .parentBookRight p {
+    width: 50%;
+    line-height: 1.7rem;
+    font-style: oblique;
+  }
+
+  .parentDown {
+    width: 88%;
+    margin: auto;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    position: relative;
+    border-radius: 10px;
+  }
+
+  .parentDown h4 {
+    position: absolute;
+    top: -15px;
+    left: 60px;
+    background-color: #fff;
+    width: 235px;
+    text-align: center;
+  }
+
+  .reviews {
+    height: 400px;
+    overflow-y: auto;
+  }
+
+  .parentDown {
+    margin: 1.6rem auto;
+    box-shadow: 0 10px 10px 0 #00000093;
+    border-radius: 10px;
+    padding: 10px;
+    width: 86%;
+  }
+
+  .bookItemReview {
+    margin: 1.6rem auto;
+    box-shadow: 0 10px 10px 0 #00000093;
+    border-radius: 10px;
+    padding: 10px;
+    width: 90%;
+  }
+
+  .authorParentBookdown {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .authorParentBookdown .authorBookLeft {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 60%;
+  }
+
+  .parentContentAuthers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .authorParentBookdown .ParentImage {
+    width: 40%;
+    height: 100px;
+    margin-bottom: 1rem;
+    border: red;
+  }
+
+  .authorParentBookdown .ParentImage img {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto !important;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .authorParentBookdown .select {
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 20px;
+    padding: 3px 10px;
+    outline: none;
+  }
+
+  .authorParentBookdown .select option {
+    font-size: 1.3rem;
+    border-radius: 20px;
+    padding: 3px 10px;
+    border: 1px solid rgb(255, 174, 0);
+    outline: none;
+    margin-bottom: 1rem;
+  }
+
+  .authorParentBookdown .select:focus {
+    border: 1px solid rgb(213, 229, 33);
+  }
+
+  .authorParentBookdown .parentBookRight {
+    margin-top: 0;
+    display: flex;
+    align-items: start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  option:active {
+    border: 1px solid rgb(213, 229, 33);
+    background-color: goldenrod;
+    color: rgb(228, 14, 14);
+  }
+
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+    border: 3px solid #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+
+  /* Media queries */
+  @media screen and (max-width: 1440px) {
+    .parentBookTop {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .bookLeft,
+    .parentBookRight p {
+      width: 80%;
+    }
+
+    .bookLeft .parentImage img {
+      width: 100%;
+    }
+
+    .parentBookRight {
+      align-items: center;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .parentBookTop {
+      width: 90%;
+    }
+
+    .parentBookRight p {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .bookDetails {
+      width: 95%;
+    }
+
+    .parentBookTop {
+      width: 100%;
+      gap: 0.5rem;
+    }
+
+    .bookLeft .parentImage {
+      height: 250px;
+    }
+
+    .parentBookRight p {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .parentBookTop {
+      flex-direction: column;
+    }
+
+    .bookLeft,
+    .parentBookRight {
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    .bookLeft .parentImage img {
+      width: 100%;
+    }
+
+    .parentDown {
+      width: 95%;
+    }
+
+    .bookItemReview {
+      width: 100%;
+    }
+
+    .parentBookRight p {
+      width: 100%;
+    }
+
+    .parentContentAuthers {
+      flex-direction: column;
+    }
+
+    .starts span {
+      font-size: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 300px) {
+    .parentBookTop {
+      width: 100%;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .bookLeft .parentImage {
+      height: 200px;
+    }
+
+    .parentDown,
+    .bookItemReview {
+      width: 100%;
+      padding: 0.5rem;
+    }
+
+    .authorParentBookdown .ParentImage {
+      width: 50px;
+      height: 75px;
+    }
+
+    .authorParentBookdown .select {
+      font-size: 0.8rem;
+    }
+
+    .starts span {
+      font-size: 0.8rem;
+    }
+  }
+  .stars {
+    color: gold;
+    font-size: 1.5em;
+  }

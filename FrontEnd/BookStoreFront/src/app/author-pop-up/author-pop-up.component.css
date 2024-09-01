@@ -1,0 +1,95 @@
+.custom-file-input {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  .popup-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #171717;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    color: white;
+  }
+
+  .popup-container .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f0a416;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    z-index: 100;
+  }
+
+  .popup-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .mat-form-field {
+    width: 100%;
+  }
+
+  .mat-form-field input {
+    font-size: 1rem;
+  }
+
+  .mat-form-field mat-label {
+    color: #333;
+  }
+
+  div.mat-dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+
+  div.mat-dialog-actions button.btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #ffc107;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+
+  div.mat-dialog-actions button.btn:hover {
+    background-color: #e0a800;
+  }
+
+  div.mat-dialog-actions button.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.5);
+  }
+
+  .popup-container div {
+    margin-top: 10px;
+  }
+
+  .popup-container div mat-label {
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #333;
+  }
+
+  .popup-container input[type="file"] {
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #0000009e;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+  .action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

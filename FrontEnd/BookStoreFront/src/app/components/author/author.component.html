@@ -1,0 +1,67 @@
+<div class="category-container">
+  <h1>Authors</h1>
+  <div class="icon-plus">
+    <i
+      class="fa-solid fa-plus btn btn-warning"
+      (click)="openAddAuthorForm()"
+    ></i>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">photo</th>
+        <th scope="col">firstName</th>
+        <th scope="col">lastName</th>
+        <th scope="col">Desc</th>
+        <th scope="col">Data of Birth</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let author of Authors; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>
+          <img
+            [src]="imageUrl + author.imagePaths[0]"
+            alt="{{ author.name }}"
+            class="category-image"
+          />
+        </td>
+        <td>{{ author.firstName }}</td>
+        <td>{{ author.lastName }}</td>
+        <td>{{ author.desc }}</td>
+        <td>{{ author.DateOfBirth }}</td>
+
+        <td>
+          <div class="icons">
+            <a (click)="deleteAuthor(author._id)"
+              ><i class="fa-solid fa-trash btn btn-warning"></i
+            ></a>
+            <a (click)="openEditForm(author)"
+              ><i class="fa-solid fa-pen-to-square btn btn-warning"></i
+            ></a>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <div class="pagination">
+          <button (click)="prevPage()" [disabled]="currentPage === 1">Prev</button>
+
+          <button *ngFor="let page of getPageButtons()"
+          (click)="goToPage(page)"
+          [disabled]="currentPage === page">
+               {{ page }}
+          </button>
+
+          <button (click)="nextPage()" >Next</button>
+        </div>
+
+      </tr>
+    </tbody>
+
+
+
+  </table>
+</div>

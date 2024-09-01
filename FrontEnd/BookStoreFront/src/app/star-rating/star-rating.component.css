@@ -1,0 +1,21 @@
+.rating-container {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: lightgray;
+}
+
+button.active {
+  color: gold;
+}
+
+span {
+  margin-left: 10px;
+  font-size: 18px;
+}

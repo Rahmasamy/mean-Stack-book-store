@@ -1,0 +1,71 @@
+<div class="popup-container">
+  <button
+    class="btn btn-warning closeicon"
+    style="color: aliceblue !important"
+    (click)="closeDialog()"
+  >
+    X
+  </button>
+  <form
+    action=""
+    [formGroup]="bookForm"
+    (ngSubmit)="onFormSubmit()"
+    class="bookForm"
+  >
+    <mat-form-field>
+      <mat-label> Book Name</mat-label>
+      <input matInput formControlName="title" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label> Category Id</mat-label>
+      <input matInput formControlName="Category_id" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label> Author Id</mat-label>
+      <input matInput formControlName="Author_id" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label> Rating</mat-label>
+      <input matInput formControlName="rating" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label> Desc</mat-label>
+      <input matInput formControlName="desc" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label> Reviews</mat-label>
+      <input matInput formControlName="reviews" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Select Author</mat-label>
+      <mat-select formControlName="Author">
+        <mat-option *ngFor="let val of Authors" [value]="val._id">
+          {{ val.firstName }} {{ val.lastName }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Select Category</mat-label>
+      <mat-select formControlName="Category">
+        <mat-option *ngFor="let val of categories" [value]="val._id">
+          {{ val.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div>
+      <label> img</label>
+      <input type="file" (change)="onFileSelected($event)" />
+    </div>
+    <div mat-dialog-actions class="action">
+      <button
+        mat-raised-button
+        color="warning"
+        class="btn btn-warning"
+        type="submit"
+      >
+        {{ data ? "Update" : "Save" }}
+      </button>
+    </div>
+  </form>
+</div>

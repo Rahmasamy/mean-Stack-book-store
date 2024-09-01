@@ -1,0 +1,67 @@
+<div class="authorDetails">
+  <div class="parentBookTop">
+    <!-- {{ imageUrl + dataDetailse.imagePaths[0] }} -->
+    <div class="bookLeft">
+      <div class="parentImage" *ngIf="images">
+        <img [src]="imageUrl + dataDetailse.imagePaths[0]" alt="Author Image" />
+      </div>
+    </div>
+
+    <div class="parentBookRight">
+      <h2>{{ dataDetailse.fullName }}</h2>
+      <h2 class="bookDate" *ngIf="DateOfBirth">{{ DateOfBirth }}</h2>
+
+      <p>
+        {{ dataDetailse.desc }}
+      </p>
+    </div>
+  </div>
+
+  <div class="parentDown">
+    <h4>Author's Books</h4>
+    <div class="reviews">
+      @for (item of books; track $index) {
+      <div class="bookItemReview">
+        <div class="authorParentBookdown">
+          <div class="authorBookLeft">
+            <div class="ParentImage">
+              <img [src]="imageUrl + item.imagePaths[0]" alt="Orange Image" />
+            </div>
+
+            <div class="contentAuthorDown">
+              <h3>{{ item.title }}</h3>
+              <div class="parentContentAuthers">
+                <div>
+                  <div class="stars">
+                    {{ item.starRating }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="parentBookRight">
+            <select
+              class="select"
+
+              (change)="onStatusChange($event, item?._id)"
+            >
+              <option value="no-Reading">no-Reading</option>
+              <option value="want_to_read">want-to-read</option>
+              <option value="current_read">current_read</option>
+              <option value="read">read</option>
+            </select>
+
+            <div class="starts">
+              <app-star-rating
+                [(rating)]="item.rating"
+                (ratingChange)="updateBookWithStars($event, item?._id)"
+              ></app-star-rating>
+            </div>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>

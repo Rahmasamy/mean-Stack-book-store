@@ -1,0 +1,36 @@
+<div class="popup-container">
+  <button class="btn btn-warning close-btn" style="color: aliceblue !important;" (click)="closeDialog()">X</button>
+  <form [formGroup]="authorForm" (ngSubmit)="onFormSubmit()" class="categoryForm">
+    <mat-form-field>
+      <mat-label>Enter First Name of Author </mat-label>
+      <input matInput formControlName="firstName">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label> Enter Last Name of Author</mat-label>
+      <input matInput formControlName="lastName">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Category Id</mat-label>
+      <input matInput formControlName="Category_id">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>DateOfBirth</mat-label>
+      <input matInput formControlName="DateOfBirth">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>desc</mat-label>
+      <input matInput formControlName="desc">
+    </mat-form-field>
+    <div>
+      <label>Img</label>
+      <input type="file" (change)="onFileSelected($event)">
+    </div>
+
+
+
+    <div mat-dialog-actions class="action">
+      <button mat-raised-button color="warning" class="btn btn-warning" type="submit">{{data ? 'Update' : 'Save'}}</button>
+    </div>
+  </form>
+</div>
+

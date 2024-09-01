@@ -1,0 +1,113 @@
+<div class="header-container">
+  <nav class="navbar navbar-expand-lg bg-black navbar-container">
+    <div class="logo d-flex align-items-center">
+      <i class="fa-solid fa-book-open-reader" style="color: red"></i>
+      <p class="mb-0 ms-2">BookStore-Market</p>
+    </div>
+    <div class="ms-auto d-flex align-items-center">
+      <a
+        class="nav-link mid-none"
+        routerLink="userprofile"
+        *ngIf="isLogin"
+        (click)="closeNavbar()"
+        >{{ name }}</a
+      >
+      <img
+        [src]="imageUrl + images"
+        width="40px"
+        *ngIf="isLogin"
+        class="rounded-circle ms-2 me-3 mid-none"
+        alt=""
+      />
+
+      <button class="btn btn-warning p-2 m buy">Buy Now</button>
+    </div>
+  </nav>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-container2">
+    <div class="container-fluid second-navbar">
+      <div class="navbar-brand my-2 my-lg-0 mid-none">
+        <img
+          src="https://writer.ancorathemes.com/splash/src/img/logo.svg"
+          alt="img-not-found"
+        />
+        <div class="d-lg-none text-center mt-2">
+          <!-- <button class="btn btn-warning purchase">Purchase Theme</button> -->
+        </div>
+      </div>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active" aria-current="page" routerLink="">Home</a>
+          <a class="nav-link" routerLink="about">About</a>
+          <a class="nav-link" routerLink="admin" *ngIf="isAdmin">Admin</a>
+          <a class="nav-link" routerLink="Users" *ngIf="isAdmin">Users</a>
+          <a class="nav-link" routerLink="userCategories" *ngIf="!isAdmin"
+            >Categories</a
+          >
+          <a class="nav-link" routerLink="userAuthors" *ngIf="!isAdmin"
+            >Authors</a
+          >
+          <a class="nav-link" routerLink="books" *ngIf="!isAdmin"
+          >Books</a>
+        </div>
+
+        <div class="navbar-brand mx-auto my-2 my-lg-0 mid-block">
+          <img
+            src="https://writer.ancorathemes.com/splash/src/img/logo.svg"
+            alt="img-not-found"
+          />
+        </div>
+
+        <div class="navbar-nav ms-auto">
+          <a
+            class="nav-link"
+            routerLink="login"
+            *ngIf="!isLogin"
+            (click)="closeNavbar()"
+            >Login</a
+          >
+          <a
+            class="nav-link"
+            routerLink="register"
+            *ngIf="!isLogin"
+            (click)="closeNavbar()"
+            >Register</a
+          >
+          <a
+            class="nav-link"
+            (click)="logout()"
+            *ngIf="isLogin"
+            (click)="closeNavbar()"
+            >Logout</a
+          >
+          <img
+            [src]="imageUrl + images"
+            width="40px"
+            *ngIf="isLogin"
+            class="rounded-circle ms-2"
+            alt=""
+          />
+          <a
+            class="nav-link"
+            routerLink="userprofile"
+            *ngIf="isLogin"
+            (click)="closeNavbar()"
+            >{{ name }}</a
+          >
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>

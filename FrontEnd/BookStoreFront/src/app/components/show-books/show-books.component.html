@@ -1,0 +1,40 @@
+<div class="user-big-container">
+  <div class="category-container">
+    <h2> Our Books</h2>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3" *ngFor="let book of books">
+          <div class="card">
+            <img [src]="imageUrl+book.imagePaths" class="card-img-top" alt="..." />
+            <div class="card-body">
+
+
+                <h6 class="card-title">
+                  Book title :
+                  <a [routerLink]="'/bookDetails/' + book._id">
+                    {{ book.title.length > 10 ? (book.title.substring(0, 15) + '...') : book.title }}
+                  </a>
+                </h6>
+                <p class="card-title-category-author">
+                  Category:
+                  <a [routerLink]="'/categoryDetails/' + book.Category_id">
+                    {{ book.Category.length > 10 ? (book.Category.substring(0, 15) + '...') : book.Category }}
+                  </a>
+
+                </p>
+              <p class="card-title-category-author">
+                Author
+                <a [routerLink]="'/authorDetails/' + book.Author_id">
+                  {{ book.Author.length > 10 ? (book.Author.substring(0, 15) + '...') : book.Author }}
+                </a>
+              </p>
+              <p class="rating">
+                {{convertRatingToStars(book.rating)}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

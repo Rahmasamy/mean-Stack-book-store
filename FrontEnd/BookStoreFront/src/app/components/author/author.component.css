@@ -1,0 +1,80 @@
+h1 {
+  font-size: 55px;
+  font-family: "Whisper", cursive;
+  font-weight: 500;
+}
+.icon-plus {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.table {
+  margin-top: 20px;
+  animation: slideInFromTop 1s forwards;
+}
+a {
+  margin-left: 17px;
+}
+
+img {
+  width: 60px;
+  height: 60px;
+}
+
+.pagination {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination button {
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #ffc107;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+/* @keyframes slideInFromTop {
+  0% {
+    transform: translateY(-300%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+} */
+tbody tr:nth-child(odd) {
+  animation: slideInFromLeft 1s forwards;
+}
+tbody tr:nth-child(even) {
+  animation: slideInFromRight 1s forwards;
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

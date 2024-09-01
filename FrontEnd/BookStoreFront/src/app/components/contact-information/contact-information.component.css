@@ -1,0 +1,26 @@
+.contact-info {
+  margin-top: 5rem;
+}
+.row-div {
+  /* background-color: brown; */
+  padding: 20px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: gray;
+  box-shadow: 2px 0px 37px -5px #000000;
+  border-radius: 20px;
+  padding: 3rem 2rem;
+}
+.visitus-btn {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.row-div h5 {
+  color: black;
+}
+iframe {
+  box-shadow: -2px 0px 37px 7px rgba(54, 54, 54, 0.267);
+}

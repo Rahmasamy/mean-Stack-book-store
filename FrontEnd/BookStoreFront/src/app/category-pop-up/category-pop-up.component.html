@@ -1,0 +1,28 @@
+<div class="popup-container">
+    <button class ="btn btn-warning close-category-btn" style="color: aliceblue !important;" (click)="closeDialog()">
+        X
+    </button>
+    <form action=""  [formGroup]="categoryForm" (ngSubmit)="onFormSubmit()" class="categoryForm">
+        <mat-form-field>
+            <mat-label> Category Name</mat-label>
+            <input matInput formControlName="name">
+          </mat-form-field>
+        <mat-form-field>
+            <mat-label> Desc</mat-label>
+            <input matInput formControlName="desc">
+        </mat-form-field>
+          <div class="category-img">
+            <label> Category img</label>
+            <input type="file" (change)="onFileSelected($event)">
+          </div>
+
+
+          <div mat-dialog-actions class="action">
+
+            <button mat-raised-button color="warning" class="btn btn-warning" type="submit">{{data ? 'Update': 'Save'}}</button>
+        </div>
+    </form>
+
+
+
+</div>

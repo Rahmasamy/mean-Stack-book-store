@@ -1,0 +1,72 @@
+<div class="parentTable">
+  <table class="table">
+    <thead class="fixThead">
+      <tr class="trParent">
+        <th scope="col">cover</th>
+        <th scope="col">Name</th>
+        <th scope="col">Author</th>
+        <th scope="col">Avg Rate</th>
+        <th scope="col">Rating</th>
+        <th scope="col">shelve</th>
+      </tr>
+    </thead>
+    <tbody>
+      @if (error){
+      <tr
+        style="
+          width: '100%';
+          line-height: 60vh;
+          margin: auto;
+          text-align: center;
+        "
+      >
+        <p style="color: red; margin: auto">
+          {{ message }}
+        </p>
+      </tr>
+      }
+
+      <tr *ngFor="let item of AllBooksUser; let i = index">
+        <td scope="row">
+          <img
+            [src]="imageUrl + item.book_id.imagePaths[0]"
+            width="40px"
+            alt=""
+          />
+        </td>
+        <td scope="row">{{ item.book_id.title }}</td>
+        <td scope="row">{{ item.book_id.Author }}</td>
+        <td scope="row">
+          <div class="stars_defualt">
+            {{ convertRatingToStars(item.book_id.rating) }}
+          </div>
+        </td>
+
+        <td scope="row">
+          <!-- {{ item.book_id.rating }} -->
+          <div class="stars_user">
+            {{ convertRatingToStars(item.book_id.userRating) }}
+          </div>
+        </td>
+        <td scope="row">
+          <select
+            [(ngModel)]="item.status"
+            (change)="onStatusChange($event, item?._id)"
+          >
+            <option class="selectedOptions" value="{{ item.status }}">
+              {{ item.status }}
+            </option>
+
+            <option
+              *ngFor="let status of statuses"
+              [value]="status"
+              [selected]="status === item.status"
+            >
+              {{ status }}
+            </option>
+          </select>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,38 @@
+/* Add this to your CSS file */
+
+.popup-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* background-color: #fff; */
+}
+
+.userForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.mat-form-field {
+  margin-bottom: 15px;
+}
+.action{
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .popup-container {
+    width: 90%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mat-form-field {
+    width: 100%;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px;
+  }
+}

@@ -1,0 +1,24 @@
+<div class="user-big-container">
+  <div class="category-container">
+    <h2> Our Authors</h2>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3" *ngFor="let author of Authors">
+          <div class="card">
+            <img [src]="imageUrl+author.imagePaths" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">
+              <!-- <a routerLink=""> {{ author.fullName }} </a> -->
+              <a [routerLink]="'/authorDetails/' + author._id">
+
+                {{ author.fullName }}</a>
+              </h5>
+
+              <!-- <p class="card-text">{{author.imagePaths}}</p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

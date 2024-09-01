@@ -1,0 +1,8 @@
+<div class="rating-container">
+  <button *ngFor="let star of stars"
+          (click)="setRating(star)"
+          [ngClass]="{'active': star <= rating}">
+    &#9733;
+  </button>
+  <span>{{ rating }}</span>
+</div>
